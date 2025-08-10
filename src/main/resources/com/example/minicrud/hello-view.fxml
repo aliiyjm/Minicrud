@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="453.0" prefWidth="619.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.minicrud.HelloController">
+    <TableView fx:id="taskTable" layoutX="10.0" layoutY="10.0" prefHeight="300.0" prefWidth="580.0">
+        <columns>
+            <TableColumn fx:id="titleCol" text="Título" />
+            <TableColumn fx:id="descCol" text="Descripción" />
+            <TableColumn fx:id="priorityCol" text="Prioridad" />
+            <TableColumn fx:id="dateCol" text="Fecha Límite" />
+        </columns>
+    </TableView>
+
+    <TextField fx:id="titleField" layoutX="10.0" layoutY="320.0" promptText="Título" />
+    <TextArea fx:id="descField" layoutX="10.0" layoutY="350.0" prefHeight="60.0" promptText="Descripción" />
+    <ComboBox fx:id="priorityCombo" layoutX="200.0" layoutY="320.0" promptText="Prioridad" />
+    <DatePicker fx:id="datePicker" layoutX="320.0" layoutY="320.0" />
+
+    <Button layoutX="494.0" layoutY="351.0" onAction="#addTask" text="Agregar" />
+    <Button layoutX="558.0" layoutY="351.0" onAction="#editTask" text="Editar" />
+    <Button layoutX="490.0" layoutY="385.0" onAction="#deleteTask" text="Eliminar" />
+    <Button layoutX="553.0" layoutY="385.0" onAction="#clearFields" text="Limpiar" />
+</AnchorPane>
